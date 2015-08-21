@@ -18,6 +18,7 @@ $.ajax('https://api.phila.gov/opa/v1.1/download');
 // Display appropriate resource
 var params = $.deparam(window.location.search.substr(1));
 if(params.resource !== undefined) {
+	$('[data-resource]').hide();
 	$('[data-resource="' + params.resource + '"]').css('display', 'inline-block');
 }
 
