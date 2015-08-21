@@ -45,7 +45,7 @@
     <ul class="inline-list">
       <li><a href="https://alpha.phila.gov">alpha.phila.gov</a></li>
       <li><a href="https://alpha.phila.gov/property">Property</a></li>
-      <li>Download</li>
+      <li>Data</li>
     </ul>
   </div>
 </div>
@@ -53,9 +53,11 @@
       <article data-swiftype-name="body" data-swiftype-type="text">
         <div class="row">
           <div class="large-24 columns">
-            <h1>Download</h1>
-            <p>Your IP Address is: <span class="ip" data-default="68.104.18.2">(Loading)</span> and you are downloading <span class="resource">OPA Property Data</span> on <span class="timestamp"></span></p>
-            <a href="#" class="button button-large">Proceed to download</a>
+            <h1>Data</h1>
+            <p>Your IP Address is: <span class="ip" data-default="68.104.18.2">(Loading)</span> and you are accessing <span class="resource">OPA Property Data</span> on <span class="timestamp"></span></p>
+            <a data-resource="csv/" href="https://data.phila.gov/api/views/3h6i-2hfj/rows.csv?accessType=DOWNLOAD&bom=true" class="button button-large">Proceed to download (CSV)</a>
+            <a data-resource="geojson/" href="https://data.phila.gov/resource/tqtk-pmbv.geojson" class="button button-large">Proceed to download (GeoJSON)</a>
+            <a data-resource="datalens/" href="https://data.phila.gov/view/npyd-64nx" class="button button-large">Proceed to visualization</a>
           </div>
         </div>
       </article>
@@ -114,9 +116,12 @@
 
 <!-- End Footer -->
 
+    <iframe src="https://data.phila.gov/view/npyd-64nx" width="100%" height="100%" id="datalens"></iframe>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>
     <script src="//cityofphiladelphia.github.io/patterns/dist/0.9.1/js/patterns.min.js"></script>
+    <script src="deparam.js"></script>
     <script src="main.js"></script>
     <script>
       $(document).foundation();

@@ -14,3 +14,16 @@ $.getJSON('https://api.ipify.org?format=json')
 
 // Log the visit (should return 404 but still logs the request)
 $.ajax('https://api.phila.gov/opa/v1.1/download');
+
+// Display appropriate resource
+var params = $.deparam(window.location.search.substr(1));
+if(params.resource !== undefined) {
+	$('[data-resource="' + params.resource + '"]').css('display', 'inline-block');
+}
+
+// For datalens, show a fullscreen iframe to maintain the URL
+$('[data-resource="datalens/"]').click(function(e) {
+	$('body *').hide();
+	$('#datalens').show();
+	e.preventDefault();
+});

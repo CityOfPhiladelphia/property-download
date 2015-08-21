@@ -1,1 +1,3 @@
 .ip, .resource, .timestamp { font-weight: bold; }
+[data-resource] { display: none; }
+#datalens { display: none; }
