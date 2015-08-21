@@ -23,7 +23,7 @@ if(params.resource !== undefined) {
 }
 
 // For datalens, show a fullscreen iframe to maintain the URL
-$('[data-resource="datalens/"]').click(function(e) {
+$('[data-resource="datalens"]').click(function(e) {
 	$('body *').hide();
 	$('#datalens').show();
 	e.preventDefault();
